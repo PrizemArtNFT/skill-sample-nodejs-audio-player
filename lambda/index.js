@@ -36,7 +36,7 @@ const PlayAudioIntentHandler = {
     async handle(handlerInput) {
         const playbackInfo = await getPlaybackInfo(handlerInput);
 
-        const speakOutput = 'Playing the audio stream.';
+        const speakOutput = 'Play my NFT music.';
         const playBehavior = 'REPLACE_ALL';
         const podcastUrl = 'https://audio1.maxi80.com';
         
@@ -111,7 +111,7 @@ const HelpIntentHandler = {
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'AMAZON.HelpIntent';
     },
     handle(handlerInput) {
-        const speakOutput = 'You can say "play audio" to start playing music! How can I help?';
+        const speakOutput = 'You can say "play my NFT music" to start playing music! How can I help?';
 
         return handlerInput.responseBuilder
             .speak(speakOutput)
